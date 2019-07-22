@@ -1,0 +1,177 @@
+ div.header{
+     background-color:lightblue;
+     font-size:120px;
+     font-family: impact;
+     padding:10px;
+     height:160px;
+     width:100%;
+
+ }
+
+ div.header img{
+     float:left;
+ }
+
+ div.header button{
+     font-size:45px;
+     font-family: sans-serif;
+     border:solid lightblue;
+     background-color:lightblue;
+     position:relative;
+     top:-12px;
+     left:150px;
+     float:right;
+ }
+    
+ div.logo{
+     float:left;
+ }
+
+ body{
+     min-width: 800px;
+ }
+      
+ div.dropdown-content{
+     font-size:25px;
+     font-family: sans-serif;
+     padding:10px;
+     margin-right:1px;
+     background:lightblue;
+     right:30px;
+     top:67px;
+     position:absolute;
+     z-index:1;
+     display:none;
+ }
+
+ div.dropdown-content input[type=text], select {
+       width: 95%;
+       border: 1px solid #aaa;
+}
+
+div.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+form{
+     font-size:12px;
+}
+
+
+div.dropdown-content input[type=submit] {
+   width: 95%;
+   color: white;
+   background-color: #09f;
+   color: white;
+   padding: 15px;
+   margin-left: 60px;
+   border: none;
+}
+div.welcome{
+     font-size:40px;
+}
+input[type=text] {
+   width: 500px;
+}
+li{
+    list-style: none;
+}
+div.upload a{
+    float:right;
+}
+#thumbs{
+    background-color: lightgrey;
+    height:400px;
+    width:300px;
+    float:left;
+}
+#thumb{
+    background-color: lightgrey;
+    height:300px;
+    width:300px;
+    overflow-y:scroll;
+}
+
+#search{
+    background-color: lightgrey;
+    height:300px;
+    width:300px;
+    float:left;
+    font:50px;
+    overflow-y:scroll;
+}
+
+#thumb img{
+    float:left;
+    border: 3px solid transparent;
+}
+#thumb img:hover{
+    border:solid red 3px;
+    float:left;
+}
+#big{
+    float:left;
+}
+div.top{
+            margin: 0 auto;
+            width: 1130px;
+
+}
+div.logout{
+         position:relative;
+         top:-1px;
+         left:-1px;
+         float:right; 
+}
+div.upload{
+        position:relative;
+        right:70px;
+        padding:10px;
+        
+}
+div.error {
+         font-size:50px; 
+}
+div.right{
+
+ position:relative;
+        left:415px;
+        float:left;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

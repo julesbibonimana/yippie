@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <title>Yippee</title>
+    <link rel="stylesheet" href="Yippee.css" type="text/css" />
+</head>
+<div class="header">
+<div class="logo">
+<img src="logo.png" width=150 hieght=180 style="margin-right:30px;margin-left:30px;"> Yippee
+</div>
+<div class="logout">
+<img src="logout.png" id="logout" width=150 hieght=180 >
+</div>
+<div id="login" class="dropdown">
+     <button class="dropbtn"><img src="login.png" width=150 hieght=180> </button>
+  <div class="dropdown-content">
+      <form action = "<?php $_PHP_SELF ?>" method = "GET">
+     <label>Username</label>
+     <input type="text" id="user" value=""><br>
+     <label>Password</label>
+     <input type="text" id="pass" value=""><br>
+     <input type="button" id="submit" value="submit">
+     </form>
+    </div>
+
+</div>
+</div>
+<br>
+<center><img src="picture.jpg" width=400 hieght=200></center>
+<center><input type="text" id="pass" value=""style="border:solid black">
+<a href="error.html"><img src="search.png" width=14 hieght=13 style="border:solid black ;position:relative; top:7px;"></a></center>
+<br>
+<center>*Upload your most Yippee pictures for a chance to have your picture on the home page</center>
+<center><h2>Features</h2></center>
+<center><table width=70% >
+	<tr>
+          <td width=25%>
+               
+               <ul>
+               <li><b>Documents</b></li>
+               <li><a href="error.html" >Notebook</a></li>
+               <li><a href="error.html" >SpreadSheet</a></li>
+               <li><a href="error.html" >Drawing Pad</a></li>
+               <li><a href="error.html" >Photo Editor</a></li>
+               <li><a href="error.html"  href="error.html">Slides</a></li>
+		  </ul>
+		  </td>
+			
+	<td width=25% style="border:none">
+		
+		  <ul>
+               <li><b>Search Type</b></li>
+               <li><a href="error.html" >Location</a></li>
+               <li><a href="error.html" >Image</a></li>
+               <li><a  href="error.html">Answers</a></li>
+               <li><a href="error.html" >Scholarly</a></li>
+               <li><a href="error.html" >Advanced</a></li>
+		  </ul>
+</td>
+			
+	<td width=25% style="border:none">
+           <ul>
+               <li><b>Applications</b></li>
+               <li><a href="error.html" >Contacts</a></li>
+               <li><a href="error.html" >Calender</a></li>
+               <li><a href="error.html" >Mail</a></li>
+               <li><a href="error.html" >News</a></li>
+               <li><a href="error.html" >Store</a></li>
+		  </ul>
+
+</td>
+     <td width=25% style="border:none">
+           <ul>
+               <li><b>Extra</b></li>
+               <li><a href="FanFoto.html" >FotoFan</a></li>
+               <li><a href="error.html" >Answers</a></li>
+               <li><a href="error.html" >VideoShare</a></li>
+               <li><a href="error.html" >Upload Picture</a></li>
+               <li><a href="error.html" >Video Call</a></li>
+		  </ul>
+     </td>
+</tr>
+</table>
+
+</center>
+<body>
+
+<script>
+	login=document.getElementById("login");
+     logout=document.getElementById("logout");
+	 
+	$(document).ready(function(){
+    $("a").click(function(event){
+        event.preventDefault();
+		alert("This feature can't be used until you log in")
+    });
+});
+	
+$("#submit").click(function() {
+   // Get the ZIP code from the text field
+   var username = $("#user").val();
+   var password=$("#pass").val();
+
+   //alert (zip);
+   // Make an Ajax request to weather.php with the entered ZIP code
+   var notNeeded;
+   $.get("weather2j.php?UserN="+username+ "&passW="+password, notNeeded, function (response) {
+      var myObj = JSON.parse (response);
+     
+      if (myObj!="") {
+		login.style.visibility = "hidden";
+		 $('a').off('click');
+
+      } else {
+         alert("This is not a vaild username and password!");
+      }
+   });
+});
+
+	 	
+    
+     
+     logout.addEventListener("click",function(){
+          login.style.visibility = "visible";
+		  $("a").click(function(event){
+        event.preventDefault();
+		alert("This feature can't be used until you log in")
+    });
+          
+     })
+</script>
+</body>
+
+</html>
+
+

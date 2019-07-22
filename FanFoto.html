@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>FotoFan</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <link rel="stylesheet" href="Yippee.css" type="text/css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+</head>
+
+
+<body>
+    
+<div class="header">
+<div class="logo">
+<img src="logo.png" width=150 hieght=180 style="margin-right:30px;margin-left:30px;"> Yippee
+</div>
+<div class="logout">
+<a href="yippee.html"><img src="logout.png" id="logout" width=150 hieght=180 ></a><br>
+</div>
+<!--<a href="yippee.html"><img src="home.png" id="logout" width=100 hieght=100 style="position:relative; float:right; top:60px; right:-120px;" ></a>
+--></div>
+<center>
+<div class="upload">
+ <a href="error.html">Upload Photos</a>
+ <br>
+ </center>
+</div>
+<center>
+    <div class="top">
+    
+ <img src="defualt.png"  id="big" width=530 height=300 style="float:left">
+ 
+ <div id="thumb"></div>
+ 
+  <div class="right">
+     
+ <button id="myBtn" style="hieght:300px;font:40px; width:300px; background-color:lightblue;">Open SlideShow</button><br>
+    </div>
+  <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+     <div class="slider" id="slide"></div>
+  </div>
+</div>
+<br>
+ </div>
+    </div>
+ <script src="fanScript2.js"></script>
+</center>
+<br>
+<center>Picture Search 
+    
+<br>
+ <input type="text" id="searchbar" value="" style="border:solid black">
+ <img src="search.png" width=14 hieght=13  id="pict" style="border:solid black ;position:relative; top:7px;"><br>
+ <form>
+    Select Options:
+    <input type="radio" id="year" name="name" value="year">
+      <label>year</label>
+        <input type="radio" id="state" name="name" value="state">
+       <label>state</label> 
+        <input type="radio" id="country"name="name" value="country">
+        <label>country</label>
+         <input type="radio" id="location"name="name" value="location">
+        <label>location</label><br>
+        <div id="demo"></div>
+         </form>
+        
+      </center>
+<script src="fanScript.js"></script>
+    
+
+
+</body>
+</html>
